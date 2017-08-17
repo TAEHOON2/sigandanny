@@ -1,0 +1,47 @@
+
+
+<div class="background">
+    
+    
+    <div class="start mx-auto" style="width: 260px"><a href="/food/select" class="btn btn-secondary btn-lg"><strong>시간 대니?</strong></a></div>
+    <div class="stop" style="position: fixed; right: 0; top: 200px; width: 200px; height: 200px; color: black; background-color: #f9f8f2;"></div>
+    <div class="begin" style="position: fixed; right: 0; top: 200px; width: 200px; height: 200px; color: black; background-color: #f9f8f2; display: none;"></div>
+    
+</div>
+
+ <div class="dn_niddle" > <p class="animated rotateIn infinite"><img class="niddle"> <%= image_tag("niddle.png") %> </img></p></div>
+
+<!--<audio controls loop autoplay>
+  <source src="http://wode.kr/media/clock.mp3" type="audio/mpeg">
+  </audio>-->
+
+
+<script>
+
+    function dabin(){
+        a = $(window).width();
+        b = a / 2;
+        $(".dn_niddle").css({left: b-2.5});
+        $(".dn_niddle").css({right: b+2.5});
+
+    };
+    
+    $(document).ready(function(){
+        dabin();
+        $(".stop").click(function(){
+            $(".animated").addClass("paused");
+            $(".stop").hide();
+            $(".begin").show();
+        });
+        
+        $(".begin").click(function(){
+            $(".animated").removeClass("paused");
+            $(".stop").show();
+            $(".begin").hide();
+        });
+    });
+    
+    $(window).resize(function(){
+        dabin();
+    });
+</script>

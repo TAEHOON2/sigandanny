@@ -1,0 +1,30 @@
+<!--<div class="sangwoo px-3 pt-4"><p class="animated bounce infinite"><strong>밥먹으러 옥땅으로 올라왐</strong></p></div>
+audio controls loop autoplay>
+  <source src="http://wode.kr/media/sangwoosound.mp3" type="audio/mpeg">
+  </audio> -->
+<div class="wrap"><div class="bestsangwoo"><%= image_tag("sangwoo.PNG") %></div></div>
+
+
+<div class="bestresult1 d-flex justify-content-center">밥약 최적의 시간은</div>
+<div class="bestresult2 d-flex justify-content-center"><%=Vote.all.order(count: :desc)[0].name %> (<%=Vote.all.order(count: :desc)[0].count%> 명 가능)입니다!</div>
+<div class="bestresult2 d-flex justify-content-center">2위 : <%=Vote.all.order(count: :desc)[1].name %> ( <%=Vote.all.order(count: :desc)[1].count %>명 가능)</div>
+<div class="bestresult2 d-flex justify-content-center">3위: <%=Vote.all.order(count: :desc)[2].name %> (<%=Vote.all.order(count: :desc)[2].count %>명 가능)</div>
+<div class="bestresult3 d-flex justify-content-center">그 외 가능한 시간은(득표순)</div>
+  <% a= Vote.all %>
+  <% @blank= a.where.not(count:0)%>
+  <% @orderedblank= @blank.all.order(count: :desc)%>
+
+<div class="bestresult4 d-flex justify-content-center">
+  <% @orderedblank.each do |b|%>
+  <%= b.name%>입니다! (<%= b.count %>)
+  <br>
+  <% end %> 
+  </div>
+</div>
+
+ 
+<!--  <% for vote in @votes %>-->
+<!--        <p>vote id<%= vote.id %></p>-->
+<!--        <p>vote count<%= vote.count %> </p>-->
+<!--    <% end %>-->
+    

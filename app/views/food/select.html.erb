@@ -1,0 +1,38 @@
+<%
+flash[:refresh] = true
+%>
+<div class ="container pt-5">
+  
+<div class="row">
+   <div class="col">
+     <div class="card" style="width: 20rem;">
+          <img class="card-img-top"> <%= image_tag("hotdog.jpg") %> </img>
+          <div class="card-block">
+            <a href="https://winner-haminnotold.c9users.io/vote/now" class="btn btn-secondary"><strong>밥약 할래?</strong></a>
+            <p class="card-text">밥약을 만들어보자!<br>선배, 공강 언제세요? 후배, 뭐 먹고 싶어요?</p>
+          </div>
+    </div>
+   </div>
+   
+   <div class="col">
+     <div class="card" style="width: 20rem;">
+          <img class="card-img-top"> <%= image_tag("brunch.jpg") %> </img>
+          <div class="card-block">
+            <a href="/index/result" class="btn btn-secondary"><strong>밥약 할래!</strong></a>
+            <p class="card-text">밥약을 확인해보자!<br>우리 몇시에 만나기로 했지? </p>
+          </div>
+    </div>
+   </div>
+  
+    <div class="col">
+     <div class="card" style="width: 20rem;">
+          <img class="card-img-top"> <%= image_tag("koreauniv.jpg") %> </img>
+          <div class="card-block">
+            <a href="/food/place" class="btn btn-secondary"><strong>아몰랑 암거나 먹을래</strong></a>
+            <p class="card-text">어디로 가야할까?<br>선택장애를 벗어나는 최적의 방법</p>
+          </div>
+    </div>
+   </div>
+  
+   </div>
+ </div>

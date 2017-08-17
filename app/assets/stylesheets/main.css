@@ -1,0 +1,201 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+a:hover {
+  text-decoration: none !important;
+   color: #4ecdc4;
+}
+
+.background {
+  background-image: url("pinky_promise_pl.png");
+  height: 800px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-color: #f9f8f2;
+  color : #fff;
+
+}
+
+.start {
+   padding-top: 600px;
+}
+
+.background a {
+  font-family: "Noto Sans KR";
+  font-size: 50px;
+  cursor: pointer;
+}
+.dn_niddle {
+    position: absolute;
+    top: 160px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 780px;
+    right: 785px;
+}
+.btn-secondary {
+  color: #47baac !important;
+}
+
+.card-block {
+  width: 500px;
+}
+
+.card img {
+  display: block;
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+
+.card-text {
+  font-size: 14px;
+  margin-top: 15px;
+  padding-left: 5px;
+}
+
+.dn_nav > div.dn_header {
+  float: left;
+  padding-left: 20px;
+  color: white;
+}
+
+.sangwoo {
+    display: inline-block;
+    font-size: 50px;
+}
+
+.dn_nav {
+    background-color: rgb(85, 85, 85);
+    width: 100%;
+    overflow: hidden;
+    height: 50px;
+    line-height: 50px;
+}
+.dn_nav > .right {
+  float: right;
+  padding-right: 20px;
+}
+
+.dn_nav a {
+  color: white;
+  cursor: pointer;
+  padding: 0px 5px;
+}
+
+.dn_nav a:hover {
+  color: #4ecdc4;
+}
+
+.footer {
+    height: 50px;
+    background-color: rgb(85, 85, 85);
+    text-align: center;
+    font-weight: bold;
+    margin: auto;
+    line-height: 50px;
+}
+
+.footer p {
+    color: #fff;
+}
+
+.container {
+    height: 600px;
+}
+
+.dn_table {
+  padding-top: 100px;
+  margin: auto;
+  overflow: scroll;
+}
+
+.wrap {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    background-color: #b5b7bc;
+}
+
+.bestsangwoo {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    
+}
+
+
+.bestresult1 {
+      color: #4c4c4c;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 48px;
+      display: inline-block;
+      padding-top: 50px;
+}
+
+.bestresult2 {
+  color: #4ecdc4;
+  font-size: 38px;
+  line-height: 58px;
+  font-weight: 700;
+  padding-bottom: 40px;
+}
+
+.bestresult3 {
+      color: #4c4c4c;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 40px;
+      display: inline-block;
+      padding-top: 50px;
+}
+
+.bestresult4 {
+  color: #4ecdc4;
+  font-size: 20px;
+  line-height: 40px;
+  font-weight: 700;
+  padding-bottom: 30px;
+}
+
+.dn_blind {
+  display:none;
+}
+
+.dn_submit {
+  padding-left:500px;
+}
+
+.place {
+  background-image:  url("koreauniv.jpg");
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 50px
+}
+
+
+.placeimg {
+      display:flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 400pxs;
+}
+
+.paused{
+    -webkit-animation-play-state:paused;
+    -moz-animation-play-state:paused;
+    -o-animation-play-state:paused; 
+    animation-play-state:paused;
+}
+
+
+#google_map {
+  margin-left:auto;
+  margin-right:auto;
+}
+
+audio { 
+   display:none;
+}

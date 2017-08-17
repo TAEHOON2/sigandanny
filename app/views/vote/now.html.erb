@@ -1,0 +1,97 @@
+<% if flash[:refresh] %>
+<script>location.reload();</script>
+<% end %>
+
+
+<div class ="container pt-6">
+<div class="dn_table">
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-uqo3{background-color:#efefef;text-align:center;vertical-align:top}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-9wz1{font-weight:bold;background-color:#47baac;color:#ffffff;text-align:center;vertical-align:top}
+</style>
+<table class="tg" style="undefined;table-layout: fixed; width: 534px">
+  <form accept-charset="UTF-8" action="/index/dovote" method="post" >
+<colgroup>
+<col style="width: 130px">
+<col style="width: 130px">
+<col style="width: 130px">
+<col style="width: 130px">
+<col style="width: 130px">
+<col style="width: 130px">
+</colgroup>
+  <tr>
+    <th class="tg-9wz1"></th>
+    <th class="tg-9wz1">월요일</th>
+    <th class="tg-9wz1">화요일</th>
+    <th class="tg-9wz1">수요일</th>
+    <th class="tg-9wz1">목요일</th>
+    <th class="tg-9wz1">금요일</th>
+  </tr>
+  <tr>
+    <td class="tg-9wz1">1교시</td>
+    <td class="tg-baqh"><%= check_box_tag(:period1) %></td>
+    <td class="tg-baqh"><%= check_box_tag(:period2) %></td>
+    <td class="tg-baqh"><%= check_box_tag(:period3) %></td>
+    <td class="tg-baqh"><%= check_box_tag(:period4) %></td>
+    <td class="tg-baqh"><%= check_box_tag(:period5) %></td>
+  </tr>
+  <tr>
+    <td class="tg-9wz1">2교시</td>
+    <td class="tg-baqh"><%= check_box_tag(:period6) %></td>
+    <td class="tg-baqh"><%= check_box_tag(:period7) %></td>
+    <td class="tg-baqh"><%= check_box_tag(:period8) %></td>
+    <td class="tg-baqh"><%= check_box_tag(:period9) %></td>
+    <td class="tg-baqh"><%= check_box_tag(:period10) %></td>
+  </tr>
+  <tr>
+    <td class="tg-9wz1">3~4교시</td>
+    <td class="tg-uqo3"><%= check_box_tag(:period11) %></td>
+    <td class="tg-uqo3"><%= check_box_tag(:period12) %></td>
+    <td class="tg-uqo3"><%= check_box_tag(:period13) %></td>
+    <td class="tg-uqo3"><%= check_box_tag(:period14) %></td>
+    <td class="tg-uqo3"><%= check_box_tag(:period15) %></td>
+  </tr>
+  <tr>
+    <td class="tg-9wz1">5교시</td>
+    <td class="tg-baqh"><%= check_box_tag(:period16) %></td>
+    <td class="tg-baqh"><%= check_box_tag(:period17) %></td>
+    <td class="tg-baqh"><%= check_box_tag(:period18) %></td>
+    <td class="tg-baqh"><%= check_box_tag(:period19) %></td>
+    <td class="tg-baqh"><%= check_box_tag(:period20) %></td>
+  </tr>
+  <tr>
+    <td class="tg-9wz1">6교시</td>
+    <td class="tg-baqh"><%= check_box_tag(:period21) %></td>
+    <td class="tg-baqh"><%= check_box_tag(:period22) %></td>
+    <td class="tg-baqh"><%= check_box_tag(:period23) %></td>
+    <td class="tg-baqh"><%= check_box_tag(:period24) %></td>
+    <td class="tg-baqh"><%= check_box_tag(:period25) %></td>
+  </tr>
+  <tr>
+    <td class="tg-9wz1">7~8교시</td>
+    <td class="tg-baqh"><%= check_box_tag(:period26) %></td>
+    <td class="tg-baqh"><%= check_box_tag(:period27) %></td>
+    <td class="tg-baqh"><%= check_box_tag(:period28) %></td>
+    <td class="tg-baqh"><%= check_box_tag(:period29) %></td>
+    <td class="tg-baqh"><%= check_box_tag(:period30) %></td>
+  </tr>
+  <tr>
+    <td class="tg-9wz1">이후</td>
+    <td class="tg-uqo3"><%= check_box_tag(:period31) %></td>
+    <td class="tg-uqo3"><%= check_box_tag(:period32) %></td>
+    <td class="tg-uqo3"><%= check_box_tag(:period33) %></td>
+    <td class="tg-uqo3"><%= check_box_tag(:period34) %></td>
+    <td class="tg-uqo3"><%= check_box_tag(:period35) %></td>
+  </tr>
+</table>
+<div class="dn_submit">
+<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+<%= submit_tag "submit" %>
+</div>
+</form>
+</div>
+</div>

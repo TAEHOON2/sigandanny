@@ -1,0 +1,48 @@
+
+  <div id="google_map" style="width:600px; height:600px;">
+          </div>
+          
+              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqKArmCIuhJ0DZXiNDi5nkGp-2uuI1CfA&callback=initialize&libraries=places" async defer></script>
+      <script>
+        var map;
+        
+        function initialize() {
+
+        var mapOptions = { //구글 맵 옵션 설정
+            zoom : 16, //기본 확대율
+            center : new google.maps.LatLng(37.586809, 127.030715), // 지도 중앙 위치
+            scrollwheel : false, //마우스 휠로 확대 축소 사용 여부
+            mapTypeControl : false //맵 타입 컨트롤 사용 여부
+        };
+
+        map = new google.maps.Map(document.getElementById('google_map'), mapOptions); //구글 맵을 사용할 타겟
+              }
+              
+    function NewMarkerWithPlaceId(placeId_in){
+      var service = new google.maps.places.PlacesService(map);
+      service.getDetails({
+        placeId: placeId_in
+      }, function (result, status) {
+        var marker = new google.maps.Marker({
+          map: google_map,
+          label: result.name,
+          place: {
+            placeId: placeId_in,
+            location: result.geometry.location,
+          },
+        });
+        marker.addListener('click', MarkerClicked);
+      });
+    }
+    
+    var placeId_arr =
+      [
+        'ChIJd3pwjby8fDURyV1XC6iKAxU', // 고려대학교
+      ];
+
+    for(var i = 0; i < placeId_arr.length; i++){
+      NewMarkerWithPlaceId(placeId_arr[i]);
+    };
+
+    </script>
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Workspace</title>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta charset="UTF-8">
+   
+</head>
+<body style="position: relative;">
+ <p class"notice"><%=notice%></p>
+ <p class"alert"><%=alert%></p>
+
+  <div class="dn_nav">
+    <div class="dn_header pr-4"><a href="https://winner-haminnotold.c9users.io/">밥약잡기 프로젝트</a></div>
+    <!--<div class="sangwoo"><p class="animated swing infinite">밥먹으러 옥땅으로 따라왐</p></div>-->
+     
+    <div class="right">
+     <div>
+      <% if current_user %>
+      <%= link_to '로그아웃', destroy_user_session_path, method: :delete %>
+      <% else %>
+      <%= link_to '회원가입', new_user_registration_path %>
+      <%= link_to '로그인', new_user_session_path %>
+      <% end %>
+     </div>
+   </div>
+  </div>
+  
+ 
+   <%= yield %>
+ 
+</body>
+
+<footer>
+  <div class="footer">
+    <p>Copyright @ 시간대니? All rights reserved</p>
+  </div>
+</footer>
+</html>
